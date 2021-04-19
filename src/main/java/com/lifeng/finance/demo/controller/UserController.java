@@ -1,5 +1,7 @@
 package com.lifeng.finance.demo.controller;
 
+import com.lifeng.finance.demo.models.Customer;
+import com.lifeng.finance.demo.models.Item;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,8 +11,8 @@ public class UserController {
 
 
     @RequestMapping("/")
-    public String index() {
-        return "index";
+    public Customer index() {
+        return new Customer("lifeng");
     }
 
     @RequestMapping("/hello")
